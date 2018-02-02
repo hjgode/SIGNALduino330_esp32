@@ -9,6 +9,18 @@ Just clone the repo and open the project file with Visual Studio and the Visual 
 Compile it and have fun.
 If you are using the Arduino IDE, you have to copy all the libs into your sketch folder and alter some includes.
 
+### Using Arduino IDE (1.6.x)
+
+Ensure you installed the Espressif ESP32 Arduino support files.
+
+clone the repo.
+
+Create dir SIGNALDuino inside your Sketchbook dir
+
+Copy repo files of SIGNALDuino dir to Sketchbook/SIGNALDuino dir.
+
+Open the RF_Receiver/RF_Receiver.ino in Arduino IDE and compile and flash to a ESP32 board (tested on an ESP32 Developer C board)
+
 ### Using SIGNALDuino in FHEM
 
 If you want to use the SIGNALDuino with FHEM, you can use it directly from FHEM. No neet to compile any sourcode.
