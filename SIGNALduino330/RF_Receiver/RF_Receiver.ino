@@ -37,7 +37,7 @@
 //#define CMP_MEMDBG 1
 #define CMP_NEWSD
 
-#define PROGNAME               "RF_RECEIVER"
+#define PROGNAME               "SIGNALduinoESP32, RF_RECEIVER"
 #define PROGVERS               "3.3.0"
 
 #if defined(ESP32)
@@ -291,7 +291,7 @@ void setup() {
   timerAttachInterrupt(timer, &cronjob, true);
   // Set alarm to call cronjob function every second (value in microseconds).
   // Repeat the alarm (third parameter)
-  timerAlarmWrite(timer, 1000000, true);
+  timerAlarmWrite(timer, 31*1000, true);
   //  timerAlarmWrite(timer, 25*1000, true);
   // Start an alarm
   timerAlarmEnable(timer);
@@ -784,7 +784,7 @@ void HandleCommand()
   }
   // V: Version
   else if (cmdstring.charAt(0) == cmd_Version) {
-    MSG_PRINTLN("V " PROGVERS " SIGNALduino - compiled at " __DATE__ " " __TIME__);
+    MSG_PRINTLN("V " PROGVERS " " PROGNAME " - compiled at " __DATE__ " " __TIME__);
   }
   // R: FreeMemory
   else if (cmdstring.charAt(0) == cmd_freeRam) {
